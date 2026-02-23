@@ -1,0 +1,94 @@
+
+
+body {
+    background-color: orangered;
+    font-family: "ocr-a-std", monospace;
+font-weight: 400;
+font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+.header {
+    margin-top: 10;
+    margin-bottom: 0px;
+}
+
+.grid-container {
+    display: grid;
+    padding: 10px 80px;
+    gap: 5px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas:
+    "image-1 image-2 image-3 image-4 image-5 text-1 image-6 image-7 image-8 image-9";
+    margin: auto;
+
+}
+
+
+
+.image-1 {
+    grid-area: image-1;
+}
+
+.image-2 {
+    grid-area: image-2;
+}
+
+.image-3 {
+    grid-area: image-3;
+}
+
+.image-4 {
+    grid-area: image-4;
+}
+.image-5 {
+    grid-area: image-5;
+}
+
+.image-6 {
+    grid-area: image-6;
+}
+
+.image-7 {
+    grid-area: image-7;
+}
+
+.image-8 {
+    grid-area: image-8;
+}
+
+.image-9 {
+    grid-area: image-9;
+}
+
+
+
+
+.text-1 {
+grid-area: text-1;
+color: plum;
+font-size: auto;
+}
+
+.footer {
+    margin-top: 0;
+    margin-bottom: 20px;
+    align-self: right;
+
+}
