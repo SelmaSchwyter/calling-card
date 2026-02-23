@@ -25,26 +25,37 @@ p {
 
 
 .header {
-    margin-top: 10;
+    margin-top: 20;
     margin-bottom: 0px;
 }
 
+.header h1 {
+    font-size: medium;
+}
+
+.description {
+    margin-top: 20;
+    margin-bottom: 0px;
+    text-align: right;
+}
+
+.description h1 {
+    font-size: medium;
+}
+
+
 .grid-container {
     display: grid;
-    padding: 10px 80px;
+    padding: 10px 60px;
     gap: 5px;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
-    "image-1 image-2 image-3 image-4 image-5 text-1 image-6 image-7 image-8 image-9";
+    "image-2 image-3 image-4 image-5 text-1 image-6 image-7 image-8 image-9";
     margin: auto;
 
 }
 
 
-
-.image-1 {
-    grid-area: image-1;
-}
 
 .image-2 {
     grid-area: image-2;
@@ -78,17 +89,25 @@ p {
 }
 
 
-
-
 .text-1 {
+min-width: 0;
+overflow-wrap: break-word;
 grid-area: text-1;
 color: plum;
-font-size: auto;
+}
+
+.picture {
+white-space: pre-wrap;
+ margin-top: 0;
+ margin-bottom: 0px;
 }
 
 .footer {
     margin-top: 0;
     margin-bottom: 20px;
-    align-self: right;
+    text-align: right;
+}
 
+.footer h1 {
+    font-size: medium;
 }
