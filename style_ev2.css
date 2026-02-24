@@ -62,14 +62,12 @@ p {
     gap: 5px;
     grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
-    "image-2 image-3 image-4 image-5 text image-6 image-7 image-8 image-9";
+    "image-2 image-3 image-4 image-5 text-1 image-6 image-7 image-8 image-9";
     margin: auto;
 
 }
 
-.text {
-    grid-area: text;
-}
+
 
 .image-2 {
     grid-area: image-2;
@@ -122,6 +120,37 @@ p {
     max-height: 80vh;
 }
 
+/* Text funktioniert nicht richtig, verschiedene Versionen sind jetz durcheinander gewürfelt */
+
+.text-1 {
+    min-width: 0;
+    overflow-wrap: break-word;
+    grid-area: text-1;
+    color: rgb(254, 192, 205);
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.text-1 p {
+    font-size: 5px;
+    transition: font-size 0.7s ease;
+}
+
+.text-1:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 60vw;
+    max-width: 80vw;
+}
+
+.text-1:hover p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
 
 .bottom-bar {
     display: flex;
@@ -137,8 +166,7 @@ p {
 white-space: pre;
 line-height: 1;
  margin-top: 0;
- margin-bottom: -30px; 
- margin-left: -42px;
+ margin-bottom: -15px;
  color: rgb(254, 192, 205);
 }
 
