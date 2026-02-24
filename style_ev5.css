@@ -118,26 +118,33 @@ p {
     grid-area: image-9;
 }
 
-.image-wrapper {
-    position: relative;
-}
-
-.image-wrapper img {
-    transition: transform 0.7s ease;
-    cursor: pointer;
-    transform-origin: center center;
-}
-
-.image-wrapper:hover img {
+.image-wrapper input:checked + label {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.1);
+    width: 80vw;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    overflow: hidden;      /* sehr wichtig: Bild wächst nur innerhalb des Rahmens */
     z-index: 9999;
-    max-width: 80vw;
-    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Bild normal nach Klick */
+.image-wrapper input:checked + label img {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover: nur Bild zoomt, Container bleibt gleich */
+.image-wrapper input:checked + label img:hover {
+    transform: scale(1.8);
+    cursor: zoom-in;
+}
 
 .bottom-bar {
     display: flex;
