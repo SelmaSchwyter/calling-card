@@ -9,6 +9,7 @@ body {
     font-family: "ocr-a-std", monospace;
 font-weight: 400;
 font-style: normal;
+font-size: 16px;
     display: flex;
     flex-direction: column;
 }
@@ -20,13 +21,18 @@ img {
 
 h1 {
     margin: 0;
-    font-size: medium;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 /* margin 0 damit alle standart Abstände neutralisiert werden */
 
 p {
     margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 .top-bar {
@@ -55,6 +61,9 @@ p {
     margin-bottom: 0px;
     text-align: right;
     color: rgb(254, 192, 205);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 .description h1 {
@@ -148,39 +157,73 @@ p {
     margin-top: 30px;
 }
 
-.picture {
-    margin: 0; 
-white-space: pre;
-line-height: 1;
- margin-top: 0;
- margin-bottom: -30px; 
- margin-left: -63px;
- color: rgb(254, 192, 205);
-}
-
-.picture a {
-    color: inherit;
-    text-decoration: none;
-    display: inline-block;
-    transition: color 0.3s ease;
-}
-
-.picture a:hover {
-    color: rgb(42, 27, 8);
-}
-
-
-
+ 
 .footer {
     margin: 0; 
     margin-top: 0;
-    margin-bottom: 10px;
-    text-align: right;
+    margin-bottom: 20px;
+    text-align: center;
     color: rgb(254, 192, 205);
-  
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 
-.footer h1 {
-    font-size: medium;
+.cat {
+    position: fixed;
+    bottom: 180px;
+    left: -300px;
+    animation: walk 25s linear infinite;
+    color: rgb(254, 192, 205);
+    transition: color 0.1s;
+    margin-bottom: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.cat:hover {
+    color: rgb(42, 27, 8);
+}
+
+.cat a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+.cat a:hover {
+    color: rgb(42, 27, 8);
+}
+
+@keyframes walk {
+    from { transform: translateX(0); }
+    to   { transform: translateX(110vw); }
+}
+
+.cat-frame {
+    position: absolute;
+    margin: 0;
+    white-space: pre;
+    color: inherit;
+    transition: color 0.1s;
+}
+
+.frame1 {
+    animation: frameOne 0.7s infinite;
+}
+
+.frame2 {
+    animation: frameTwo 0.7s infinite;
+}
+
+@keyframes frameOne {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+@keyframes frameTwo {
+    0%, 49% { opacity: 0; }
+    50%, 100% { opacity: 1; }
 }
