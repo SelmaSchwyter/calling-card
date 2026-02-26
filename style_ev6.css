@@ -173,7 +173,7 @@ p {
 .cat {
     position: fixed;
     bottom: 180px;
-    left: -300px;
+    left: -270px;
     animation: walk 25s linear infinite; /* 25s für die ganze Animation, linear=immer gleich schnell, infinite=loop */
     color: rgb(254, 192, 205);
     transition: color 0.1s;
@@ -198,8 +198,8 @@ p {
 }
 
 @keyframes walk {
-    from { transform: translateX(0); }
-    to   { transform: translateX(120vw); }
+    from { transform: translateX(0); } /* Bewegt sich nicht, ist ausserhalb wegen left: -270px; bei .cat */
+    to   { transform: translateX(120vw); } /* bewegt sich über die ganze Breite des Bildschirms und etwas weiter damit Katze ganz raus läuft */
 }
 
 .cat-frame {
